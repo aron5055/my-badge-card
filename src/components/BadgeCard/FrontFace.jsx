@@ -1,11 +1,14 @@
 import { Button } from "../ui/button";
-import { Card, CardContent } from "../ui/card";
+import { Card, CardContent, CardFooter } from "../ui/card";
 import { LuRefreshCw } from "react-icons/lu";
 import { FiMoon, FiSun } from "react-icons/fi";
-import { useTheme } from "../../contexts/ThemeProvider";
+import useTheme from "@/contexts/useTheme";
+import RingAvatar from "../RingAvatar";
 
-export function FrontFace({ handleFlip }) {
+export function FrontFace({ config, handleFlip }) {
   const { theme, toggleTheme } = useTheme();
+  const { name, status, bio, skills } = config;
+  const { email, blog, github } = config;
 
   return (
     <Card className="card-face">
@@ -21,11 +24,8 @@ export function FrontFace({ handleFlip }) {
           <FiMoon className="h-[1.2rem] w-[1.2rem]" />
         )}
       </Button>
-      <CardContent className="p-0 flex-1 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold mb-2">Front Side</h2>
-          <p className="text-muted-foreground">Card information goes here</p>
-        </div>
+      <CardContent className="p-0 flex flex-col items-center justify-start">
+        <RingAvatar email={email} />
       </CardContent>
       <Button
         className="absolute bottom-2 right-2 rounded-full"
@@ -36,6 +36,7 @@ export function FrontFace({ handleFlip }) {
         <LuRefreshCw className="h-4 w-4" />
         <span className="sr-only">翻转</span>
       </Button>
+      <div className="absolute bottom-2 left-[30%] bg-slate-300 w-[120px] h-2 opacity-90 rounded-[999px]"></div>
     </Card>
   );
 }

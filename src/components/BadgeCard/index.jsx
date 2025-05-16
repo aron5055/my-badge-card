@@ -4,7 +4,7 @@ import { BackFace } from "./BackFace";
 import { cn } from "@/lib/utils";
 import "./BadgeCard.css";
 
-function BadgeCard() {
+function BadgeCard({ config }) {
   const [flipped, setFlipped] = useState(false);
 
   const handleFlip = () => setFlipped((f) => !f);
@@ -12,8 +12,8 @@ function BadgeCard() {
   return (
     <div className="badge-card-container">
       <div className={cn("badge-card-inner", flipped ? "flipped" : "")}>
-        <FrontFace handleFlip={handleFlip} />
-        <BackFace handleFlip={handleFlip} />
+        <FrontFace config={config} handleFlip={handleFlip} />
+        <BackFace config={config} handleFlip={handleFlip} />
       </div>
     </div>
   );

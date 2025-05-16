@@ -1,7 +1,6 @@
 {
   "name": "Aron",
   "email": "yangxu@aronyang.com",
-  "title": "前端工程师",
   "status": "应届求职",
   "blog": "https://blog.aronyang.com",
   "github": "https://github.com/aron5055",
@@ -12,5 +11,7 @@
     { "id": "node", "label": "Node.js" },
     { "id": "archlinux", "label": "Arch Linux" }
   ],
-  "bio": "一名对新技术充满热情的开发者，目前正在积极寻找新的挑战与机遇。"
+  "bio": "一名对新技术充满热情的开发者，目前正在积极寻找新的挑战与机遇。",
+  "quoteUrl": "https://api.aronyang.com/quote",
+  "wakatimeUrl": "https://wakatime.com/share/@ddb445e8-19fa-4d61-868b-c76641fc1375/a3257665-a183-40af-9380-6b7d128d79d3.json"
 }

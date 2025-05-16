@@ -1,26 +1,35 @@
 import { useState, useEffect } from "react";
 import BadgeCard from "./components/BadgeCard";
-import { ThemeProvider } from "./contexts/ThemeProvider";
+import ThemeProvider from "./contexts/ThemeProvider";
+import Spinner from "./components/ui/spinner";
+import ErrorMessage from "./components/ErrorMessage";
 
 function App() {
-  const [config, setConfig] = useState({});
+  const [config, setConfig] = useState(null);
+  const [status, setStatus] = useState("loading");
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchConfig = async () => {
-      try {
-        const response = await fetch("/user-config.json");
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
+    fetch("./user-config.json")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network error");
         }
-        const data = await response.json();
+        return res.json();
+      })
+      .then((data) => {
         setConfig(data);
-      } catch (error) {
-        console.error("Error fetching config:", error);
-      }
-    };
-
-    fetchConfig();
+        setStatus("success");
+      })
+      .catch((e) => {
+        console.error(e);
+        setStatus("error");
+        setError("Failed to load user configuration");
+      });
   }, []);
+
+  if (status === "loading") return <Spinner />;
+  if (status === "error") return <ErrorMessage message={error} />;
 
   return (
     <ThemeProvider>
