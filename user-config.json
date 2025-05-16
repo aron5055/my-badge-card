@@ -1,0 +1,16 @@
+{
+  "name": "Aron",
+  "email": "yangxu@aronyang.com",
+  "title": "前端工程师",
+  "status": "应届求职",
+  "blog": "https://blog.aronyang.com",
+  "github": "https://github.com/aron5055",
+  "skills": [
+    { "id": "react", "label": "React" },
+    { "id": "typescript", "label": "TypeScript" },
+    { "id": "tailwind", "label": "Tailwind CSS" },
+    { "id": "node", "label": "Node.js" },
+    { "id": "archlinux", "label": "Arch Linux" }
+  ],
+  "bio": "一名对新技术充满热情的开发者，目前正在积极寻找新的挑战与机遇。"
+}
