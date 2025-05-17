@@ -19,7 +19,7 @@ export function BackFace({ config, handleFlip }) {
         variant="ghost"
         size="icon"
         className="absolute top-2 right-2 z-10"
-        airia-label="Toggle theme"
+        aria-label="Toggle theme"
         title="切换主题-Toggle theme"
         onClick={toggleTheme}
       >

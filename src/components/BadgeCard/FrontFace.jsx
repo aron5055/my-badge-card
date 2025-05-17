@@ -55,8 +55,8 @@ export function FrontFace({ config, handleFlip }) {
         <span className="sr-only">翻转-Flip</span>
       </Button>
 
-      {/* Bottom indicator */}
-      <div className="absolute bottom-2 left-1/2 translate-x-[-50%] bg-slate-300 dark:bg-slate-600 w-[120px] h-2 opacity-90 rounded-[999px]"></div>
+      {/* Bottom indicator - more subtle in dark mode */}
+      <div className="absolute bottom-2 left-1/2 translate-x-[-50%] bg-slate-400 dark:bg-slate-600 w-[120px] h-2 opacity-90 dark:opacity-60 rounded-[999px]"></div>
     </Card>
   );
 }
