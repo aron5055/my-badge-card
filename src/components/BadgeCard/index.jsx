@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FrontFace } from "./FrontFace";
 import { BackFace } from "./BackFace";
 import { cn } from "@/lib/utils";
-import "./BadgeCard.css";
+import "./styles.css";
 
 function BadgeCard({ config }) {
   const [flipped, setFlipped] = useState(false);

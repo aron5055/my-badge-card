@@ -1,33 +1,35 @@
+/* 
+ * BadgeCard.css
+ * Styles for the 3D flippable badge card component
+ */
+
+/* Card Container - Establishes the 3D space */
 .badge-card-container {
-  position: relative;
-  height: 400px;
+  @apply relative;
+  height: 420px;
   width: 280px;
   margin-top: -10%;
-  perspective: 1000px;
+  perspective: 1000px; /* 3D perspective for the flip effect */
 }
 
+/* Card Inner - Handles the 3D transformation */
 .badge-card-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
+  @apply relative w-full h-full;
   transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
   transform-style: preserve-3d;
 }
 
+/* Flipped state */
 .badge-card-inner.flipped {
   transform: rotateY(180deg);
 }
 
+/* Common styles for both card faces */
 .card-face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  @apply absolute w-full h-full flex flex-col justify-between;
   backface-visibility: hidden;
   border-radius: var(--radius);
   padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background-image: linear-gradient(
     145deg,
     rgba(255, 255, 255, 0.2) 0%,
@@ -42,6 +44,7 @@
   --card-glow: rgba(120, 120, 255, 0.08);
 }
 
+/* Dark theme specific styles */
 :root[class~="dark"] .card-face {
   background-image: linear-gradient(
     145deg,
@@ -55,19 +58,17 @@
   --card-glow: rgba(80, 80, 255, 0.12);
 }
 
+/* Top edge highlight effect */
 .card-face::before {
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  @apply absolute top-0 left-0 right-0 z-[1];
   height: 5px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent);
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
-  z-index: 1;
 }
 
+/* Back face needs to be rotated 180 degrees */
 .back-face {
   transform: rotateY(180deg);
 }

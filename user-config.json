@@ -1,17 +1,19 @@
 {
   "name": "Aron",
   "email": "yangxu@aronyang.com",
-  "status": "应届求职",
+  "status": "应届生求职",
   "blog": "https://blog.aronyang.com",
   "github": "https://github.com/aron5055",
   "skills": [
     { "id": "react", "label": "React" },
     { "id": "typescript", "label": "TypeScript" },
-    { "id": "tailwind", "label": "Tailwind CSS" },
-    { "id": "node", "label": "Node.js" },
+    { "id": "tailwindcss", "label": "Tailwind CSS" },
+    { "id": "nodejs", "label": "Node.js" },
     { "id": "archlinux", "label": "Arch Linux" }
   ],
   "bio": "一名对新技术充满热情的开发者，目前正在积极寻找新的挑战与机遇。",
   "quoteUrl": "https://api.aronyang.com/quote",
-  "wakatimeUrl": "https://wakatime.com/share/@ddb445e8-19fa-4d61-868b-c76641fc1375/a3257665-a183-40af-9380-6b7d128d79d3.json"
+  "wakatimeUrl": "https://wakatime.com/share/@ddb445e8-19fa-4d61-868b-c76641fc1375/a3257665-a183-40af-9380-6b7d128d79d3.json",
+  "twitter": "https://x.com/aronpixel",
+  "telegram": "https://t.me/infinityCrate"
 }
