@@ -18,6 +18,8 @@ export function FrontFace({ config, handleFlip }) {
         variant="ghost"
         size="icon"
         className="absolute top-2 right-2 z-10"
+        aria-label="Toggle theme"
+        title="切换主题-Toggle theme"
         onClick={toggleTheme}
       >
         {theme === "dark" ? <FiSun /> : <FiMoon />}
@@ -36,16 +38,17 @@ export function FrontFace({ config, handleFlip }) {
         <div className="mb-4">
           <SkillsStack skills={skills} />
         </div>
-        <div className="mt-4">
+        <div className="mt-3">
           <SocialLinks config={config} />
         </div>
       </CardContent>
 
       {/* Flip button */}
       <Button
-        className="absolute bottom-2 right-2 rounded-full"
+        className="absolute bottom-2 right-2"
         variant="ghost"
         size="icon"
+        aria-label="Flip card"
         onClick={handleFlip}
       >
         <FiRefreshCcw />

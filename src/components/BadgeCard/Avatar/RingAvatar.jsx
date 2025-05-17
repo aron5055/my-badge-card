@@ -1,9 +1,12 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import getAvatar from "@/services/getAvatar";
+import getAvatar from "@/lib/getAvatar";
 
 export default function RingAvatar({ email, theme, size = 75 }) {
   const gapSize = size + 6;
   const ringSize = size + 16;
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  const imgSize = size * devicePixelRatio;
+
   return (
     <div
       className="grid place-items-center rounded-full"
@@ -32,7 +35,7 @@ export default function RingAvatar({ email, theme, size = 75 }) {
         style={{ width: ringSize, height: ringSize }}
       >
         <Avatar style={{ width: size, height: size }}>
-          <AvatarImage src={getAvatar(email)} alt="Aron's Avatar" />
+          <AvatarImage src={getAvatar(email, imgSize)} alt="Aron's Avatar" />
           <AvatarFallback>AY</AvatarFallback>
         </Avatar>
       </div>
