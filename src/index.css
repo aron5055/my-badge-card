@@ -89,4 +89,12 @@
   .rotate-y-180 {
     transform: rotateY(180deg);
   }
+
+  .bg-tablecloth {
+    background-color: #f5f5e5; /* Light yellow base */
+    opacity: 0.9;
+    background-image: linear-gradient(#d4c04a 1px, transparent 1px),
+      linear-gradient(to right, #d4c04a 1px, #f5f5e5 1px);
+    background-size: 40px 40px;
+  }
 }

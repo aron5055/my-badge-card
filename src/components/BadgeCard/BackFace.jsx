@@ -18,7 +18,7 @@ export function BackFace({ config, handleFlip }) {
       <Button
         variant="ghost"
         size="icon"
-        className="absolute top-2 right-2 z-10"
+        className="absolute top-2 right-2 z-10 hover:bg-transparent"
         aria-label="Toggle theme"
         title="切换主题-Toggle theme"
         onClick={toggleTheme}
@@ -39,7 +39,7 @@ export function BackFace({ config, handleFlip }) {
 
       {/* Flip button */}
       <Button
-        className="absolute bottom-2 right-2"
+        className="absolute bottom-2 right-2 hover:bg-transparent"
         variant="ghost"
         size="icon"
         aria-label="Flip card"

@@ -1,4 +1,5 @@
 import { FaClock, FaCode } from "react-icons/fa";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function CodeTimeWidget({ time }) {
   return (
@@ -12,7 +13,11 @@ export default function CodeTimeWidget({ time }) {
         </span>
         <div className="flex items-center">
           <FaClock className="inline-block mr-1 text-xs text-primary/60" />
-          <span className="font-semibold">{time || "加载中..."}</span>
+          {time ? (
+            <span className="font-semibold">{time}</span>
+          ) : (
+            <Skeleton className="h-4 w-3/4" />
+          )}
         </div>
       </div>
     </div>
