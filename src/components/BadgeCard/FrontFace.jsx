@@ -31,14 +31,14 @@ export function FrontFace({ config, handleFlip }) {
           <RingAvatar email={email} theme={theme} handleFlip={handleFlip} />
         </div>
         <p className="text-2xl font-bold mb-4">{name}</p>
-        <Badge className="text-sm mb-4 border-none" variant="outline">
+        <Badge className="text-sm mb-3 border-none" variant="outline">
           <div className="rounded-full bg-green-500 w-2 h-2 mr-2 shadow-[0_0_6px_1px_rgba(74,222,128,0.6)]"></div>
           {status}
         </Badge>
         <div className="mb-4">
           <SkillsStack skills={skills} />
         </div>
-        <div className="mt-3">
+        <div className="mt-4">
           <SocialLinks config={config} />
         </div>
       </CardContent>

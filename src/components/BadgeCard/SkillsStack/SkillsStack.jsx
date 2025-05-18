@@ -19,7 +19,7 @@ export default function SkillsStack({ skills }) {
   return (
     <div className="flex justify-center gap-2 mt-4 flex-wrap">
       {skills.map(({ id, label }) => (
-        <Badge variant={id} key={id} className="text-xs">
+        <Badge variant={id} key={id} className="text-xs mr-1">
           {skillIcons[id]}
           <span className="ml-1">{label}</span>
         </Badge>
