@@ -35,7 +35,11 @@ export default function RingAvatar({ email, theme, size = 75 }) {
         style={{ width: ringSize, height: ringSize }}
       >
         <Avatar style={{ width: size, height: size }}>
-          <AvatarImage src={getAvatar(email, imgSize)} alt="Aron's Avatar" />
+          <AvatarImage
+            src={getAvatar(email, imgSize)}
+            alt="Aron's Avatar"
+            referrerPolicy="no-referrer"
+          />
           <AvatarFallback>AY</AvatarFallback>
         </Avatar>
       </div>
