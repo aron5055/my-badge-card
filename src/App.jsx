@@ -6,6 +6,7 @@ import BgSettings from "./components/BgSettings/BgSettings";
 import useConfig from "./hooks/useConfig";
 import useBgSettings from "./hooks/useBgSettings";
 import patternStyles from "./lib/patternStyles";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const { config, status, error } = useConfig();
@@ -36,6 +37,7 @@ function App() {
             handleColorChange={setColor}
           />
         </div>
+        <Analytics />
       </div>
     </ThemeProvider>
   );
